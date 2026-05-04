@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Læring og Teori | Digital Tryghed</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="subpage">
+    <!-- NAVIGATION -->
+    <nav class="v3-nav">
+        <a href="index.html" class="logo">
+            <div class="logo-dot"></div>
+            <span>Digital Tryghed</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Udforsk</a>
+            <a href="learning.html" class="active">Læring</a>
+            <a href="contact.html">Kontakt</a>
+            <a href="index.html" class="nav-cta">Start Rejsen</a>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="learning-header">
+        <div class="container text-center">
+            <div class="tag">WIKI</div>
+            <h1>Det Digitale <span>Trusselsbillede</span></h1>
+            <p>Dyk dybere ned i de fire primære koncepter bag Digital Tryghed simulatoren.</p>
+        </div>
+    </header>
+
+    <!-- CONTENT SECTIONS -->
+    <main class="learning-content container">
+        
+        <!-- WIFI -->
+        <article id="wifi" class="learning-article">
+            <div class="article-icon"><img src="assets/wifi_transparent.png" alt="Wifi"></div>
+            <h2>Det Åbne Netværk & Man-in-the-Middle</h2>
+            <div class="article-body">
+                <p>Når du sidder på en café eller i toget, er det fristende at koble på det åbne, gratis Wi-Fi. Problemet er, at åbne netværk oftest er <strong>ukrypterede</strong>. Det betyder, at den data, du sender frem og tilbage (som fx passwords, beskeder og filer), kan læses i "klartekst" af andre på samme netværk.</p>
+                <p>Et almindeligt hackerangreb i denne situation kaldes <strong>Man-in-the-Middle (MitM)</strong>. Her opretter hackeren et falsk Wi-Fi, der ligner caféens rigtige ("Cafe_Guest_Free_5G"). Når du logger på, sendes al din trafik igennem hackerens maskine, før den når ud på internettet. Hackeren kan derved stjæle dine loginoplysninger, før du overhovedet opdager det.</p>
+                <div class="tip-box">
+                    <strong>Sikkerheds-regel:</strong> Brug altid VPN på åbne netværk, eller del internet fra din egen telefon via et hotspot. På skolen skal du altid bruge Eduroam.
+                </div>
+            </div>
+        </article>
+
+        <!-- PHISHING -->
+        <article id="phishing" class="learning-article">
+            <div class="article-icon"><img src="assets/phishing2_transparent.png" alt="Phishing"></div>
+            <h2>Phishing & Social Engineering</h2>
+            <div class="article-body">
+                <p>Mennesket er ofte det svageste led i IT-sikkerhed. Det ved cyberkriminelle. Derfor bruger de <strong>Social Engineering</strong> – kunsten at manipulere folk til at bryde normale sikkerhedsprocedurer.</p>
+                <p><strong>Phishing</strong> er den mest kendte metode. Det er falske e-mails, der udgiver sig for at være fra en autoritet (fx banken, SKAT eller skolens IT-afdeling). Målet er at skabe en følelse af frygt eller hastværk: "Dit login slettes om 10 minutter, hvis du ikke klikker her!". Mailsene leder dig over på en falsk login-side, der stjæler din adgangskode.</p>
+                <p>Får du det som SMS, kaldes det <strong>Smishing</strong> (fx falske beskeder fra pakkeshops).</p>
+                <div class="tip-box">
+                    <strong>Sikkerheds-regel:</strong> IT-support eller din bank vil ALDRIG bede dig om at sende dit password eller klikke på et link for at forhindre en pludselig lukning. Stop op. Tænk dig om. Tjek afsenderadressen grundigt.
+                </div>
+            </div>
+        </article>
+
+        <!-- BADUSB -->
+        <article id="badusb" class="learning-article">
+            <div class="article-icon"><img src="assets/usb_transparent.png" alt="BadUSB"></div>
+            <h2>Fysiske Trusler: BadUSB</h2>
+            <div class="article-body">
+                <p>Du finder et dyrt USB-stik på gulvet og tænker, at du vil hjælpe med at finde ejeren ved at sætte det i din computer. Dette er en klassisk fælde!</p>
+                <p>Et ondsindet USB-stik, kendt som en <strong>BadUSB</strong>, kan ligne et helt almindeligt drev. Men indeni er det omprogrammeret til at opføre sig som et <em>tastatur</em> over for din computer. Så snart det sættes i stikket, "taster" det usynligt og lynhurtigt en række skadelige kommandoer, som åbner for bagdøre i dit system eller sletter dine filer.</p>
+                <p>Andre typer (såsom KillerUSB) samler strøm fra USB-porten og skyder den tilbage i computeren, hvilket kan brænde bundkortet af på få sekunder.</p>
+                <div class="tip-box">
+                    <strong>Sikkerheds-regel:</strong> Sæt aldrig fremmed hardware, specielt USB-stik, i din computer. Aflevér det i stedet direkte til receptionen.
+                </div>
+            </div>
+        </article>
+
+        <!-- FYSISK SIKKERHED -->
+        <article id="physical" class="learning-article">
+            <div class="article-icon"><img src="assets/lock_transparent.png" alt="Fysisk Sikkerhed"></div>
+            <h2>Fysisk Sikkerhed (Clean Desk)</h2>
+            <div class="article-body">
+                <p>Vi bruger enormt meget tid på at vælge stærke passwords, opsætte to-faktor godkendelse og opdatere antivirus. Men alt dette er ligegyldigt, hvis du efterlader din computer åben og ulåst.</p>
+                <p>I et åbent studiemiljø som et erhvervsakademi er der mange mennesker. Går du i kantinen i blot 3 minutter uden at låse skærmen, giver du enhver forbipasserende fuld adgang til dine filer, din mail og din studieidentitet. Man kalder det et brud på "Clean Desk" politikken.</p>
+                <div class="tip-box">
+                    <strong>Sikkerheds-regel:</strong> Gør det til en refleks! Tryk <code>Win + L</code> (Windows) eller <code>Ctrl + Cmd + Q</code> (Mac) HVER GANG du rejser dig fra din stol.
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="v3-footer">
+        <div class="container">
+            <p>&copy; 2026 Digital Tryghed. Skabt med fokus på tryghed.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

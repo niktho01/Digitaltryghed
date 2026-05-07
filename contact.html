@@ -10,8 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body class="subpage">
     <nav class="v3-nav">
@@ -23,7 +23,7 @@
             <a href="index.html">Udforsk</a>
             <a href="learning.html">Læring</a>
             <a href="contact.html" class="active">Kontakt</a>
-            <a href="index.html" class="nav-cta">Start Rejsen</a>
+            <a href="index.html?start=true" class="nav-cta">Start Rejsen</a>
         </div>
     </nav>
 
@@ -68,6 +68,17 @@
             <p>&copy; 2026 Digital Tryghed. Skabt med fokus på tryghed.</p>
         </div>
     </footer>
+
+    <div id="game-overlay" class="game-overlay hidden">
+        <div class="game-window">
+            <button id="close-game" class="close-btn">&times;</button>
+            <div id="game-content" class="game-content">
+                <div id="scene-image" class="scene-image"></div>
+                <div id="scene-text" class="scene-text"></div>
+                <div id="choices-container" class="choices-container"></div>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

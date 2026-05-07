@@ -10,8 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body class="subpage">
     <!-- NAVIGATION -->
@@ -24,7 +24,7 @@
             <a href="index.html">Udforsk</a>
             <a href="learning.html" class="active">Læring</a>
             <a href="contact.html">Kontakt</a>
-            <a href="index.html" class="nav-cta">Start Rejsen</a>
+            <a href="index.html?start=true" class="nav-cta">Start Rejsen</a>
         </div>
     </nav>
 
@@ -42,7 +42,7 @@
         
         <!-- WIFI -->
         <article id="wifi" class="learning-article">
-            <div class="article-icon"><img src="assets/wifi_transparent.png" alt="Wifi"></div>
+            <div class="article-icon"><img src="images/wifi_transparent.png" alt="Wifi"></div>
             <h2>Det Åbne Netværk & Man-in-the-Middle</h2>
             <div class="article-body">
                 <p>Når du sidder på en café eller i toget, er det fristende at koble på det åbne, gratis Wi-Fi. Problemet er, at åbne netværk oftest er <strong>ukrypterede</strong>. Det betyder, at den data, du sender frem og tilbage (som fx passwords, beskeder og filer), kan læses i "klartekst" af andre på samme netværk.</p>
@@ -55,7 +55,7 @@
 
         <!-- PHISHING -->
         <article id="phishing" class="learning-article">
-            <div class="article-icon"><img src="assets/phishing2_transparent.png" alt="Phishing"></div>
+            <div class="article-icon"><img src="images/phishing2_transparent.png" alt="Phishing"></div>
             <h2>Phishing & Social Engineering</h2>
             <div class="article-body">
                 <p>Mennesket er ofte det svageste led i IT-sikkerhed. Det ved cyberkriminelle. Derfor bruger de <strong>Social Engineering</strong> – kunsten at manipulere folk til at bryde normale sikkerhedsprocedurer.</p>
@@ -69,7 +69,7 @@
 
         <!-- BADUSB -->
         <article id="badusb" class="learning-article">
-            <div class="article-icon"><img src="assets/usb_transparent.png" alt="BadUSB"></div>
+            <div class="article-icon"><img src="images/usb_transparent.png" alt="BadUSB"></div>
             <h2>Fysiske Trusler: BadUSB</h2>
             <div class="article-body">
                 <p>Du finder et dyrt USB-stik på gulvet og tænker, at du vil hjælpe med at finde ejeren ved at sætte det i din computer. Dette er en klassisk fælde!</p>
@@ -83,7 +83,7 @@
 
         <!-- FYSISK SIKKERHED -->
         <article id="physical" class="learning-article">
-            <div class="article-icon"><img src="assets/lock_transparent.png" alt="Fysisk Sikkerhed"></div>
+            <div class="article-icon"><img src="images/lock_transparent.png" alt="Fysisk Sikkerhed"></div>
             <h2>Fysisk Sikkerhed (Clean Desk)</h2>
             <div class="article-body">
                 <p>Vi bruger enormt meget tid på at vælge stærke passwords, opsætte to-faktor godkendelse og opdatere antivirus. Men alt dette er ligegyldigt, hvis du efterlader din computer åben og ulåst.</p>
@@ -102,6 +102,17 @@
             <p>&copy; 2026 Digital Tryghed. Skabt med fokus på tryghed.</p>
         </div>
     </footer>
+
+    <div id="game-overlay" class="game-overlay hidden">
+        <div class="game-window">
+            <button id="close-game" class="close-btn">&times;</button>
+            <div id="game-content" class="game-content">
+                <div id="scene-image" class="scene-image"></div>
+                <div id="scene-text" class="scene-text"></div>
+                <div id="choices-container" class="choices-container"></div>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

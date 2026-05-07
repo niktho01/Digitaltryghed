@@ -41,6 +41,10 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+
+  @include mobile {
+    padding: 0 1rem;
+  }
 }
 
 // --- LAYOUT ---
@@ -87,7 +91,24 @@ body {
     gap: 2.5rem;
 
     @include tablet {
-      display: none;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      height: 100vh;
+      background: white;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+      transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: -10px 0 30px rgba(0,0,0,0.05);
+      z-index: 999;
+      padding: 2rem;
+      display: flex; // Ensure it's flex when open
+
+      &.active {
+        right: 0;
+      }
     }
 
     a {
@@ -97,21 +118,63 @@ body {
       font-size: 0.9rem;
       transition: 0.2s;
 
+      @include tablet {
+        font-size: 1.2rem;
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+      }
+
       &.active, &:hover {
         color: $primary;
       }
 
       &.nav-cta {
-        background: $text-dark;
+        background: $primary;
         color: white !important;
         padding: 0.6rem 1.2rem;
         border-radius: 50px;
         margin-left: 1rem;
         
+        @include tablet {
+          margin-left: 0;
+          margin-top: 1rem;
+        }
+
         &:hover {
-          background: $primary;
+          background: $text-dark;
         }
       }
+    }
+  }
+
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    padding: 0.5rem;
+
+    @include tablet {
+      display: flex;
+    }
+
+    span {
+      display: block;
+      width: 28px;
+      height: 3px;
+      background-color: $text-dark;
+      border-radius: 3px;
+      transition: 0.3s;
+    }
+
+    &.active {
+      span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+      span:nth-child(2) { opacity: 0; }
+      span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
     }
   }
 }
@@ -299,7 +362,7 @@ body {
       img {
         max-width: 100%;
         height: auto;
-        max-height: 400px;
+        max-height: 550px;
         object-fit: contain;
         border-radius: 20px;
         box-shadow: 0 15px 35px rgba(0,0,0,0.1);
@@ -655,10 +718,15 @@ body {
   padding: 150px 5% 50px;
   background: $bg-white;
   
+  @include tablet {
+    padding: 120px 5% 30px;
+  }
+
   h1 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 8vw, 3rem);
     color: $text-dark;
     margin: 1rem 0;
+    line-height: 1.1;
     
     span {
       color: $primary;
@@ -667,7 +735,7 @@ body {
   
   p {
     color: $text-muted;
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 4vw, 1.2rem);
   }
 }
 
@@ -682,6 +750,11 @@ body {
   margin-bottom: 2rem;
   box-shadow: 0 10px 30px rgba(0,0,0,0.03);
   border: 1px solid #f1f5f9;
+
+  @include mobile {
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+  }
   
   .article-icon {
     width: 60px;
@@ -702,15 +775,16 @@ body {
   }
   
   h2 {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 6vw, 2rem);
     color: $text-dark;
     margin-bottom: 1.5rem;
+    line-height: 1.2;
   }
   
   .article-body {
     p {
       color: $text-light;
-      font-size: 1.1rem;
+      font-size: clamp(0.95rem, 4vw, 1.1rem);
       line-height: 1.8;
       margin-bottom: 1.5rem;
     }
@@ -722,7 +796,11 @@ body {
     border-left: 4px solid $primary;
     border-radius: 0 12px 12px 0;
     color: $text-dark;
-    font-size: 1.05rem;
+    font-size: clamp(0.9rem, 3.5vw, 1.05rem);
+
+    @include mobile {
+      padding: 1rem;
+    }
   }
 }
 

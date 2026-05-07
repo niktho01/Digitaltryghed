@@ -25,6 +25,11 @@
             <a href="contact.html" class="active">Kontakt</a>
             <a href="index.html?start=true" class="nav-cta">Start Rejsen</a>
         </div>
+        <button class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
 
     <main class="contact-main">
@@ -61,6 +66,23 @@
                 </form>
             </div>
         </section>
+        <div id="guide-modal" class="game-overlay hidden">
+            <div class="game-window" style="max-width: 600px;">
+                <button id="close-guide" class="close-btn">&times;</button>
+                <div class="game-content">
+                    <div class="scene-text">
+                        <div class="tag" style="margin-bottom: 1rem;">GUIDE</div>
+                        <h1>Hvordan virker det?</h1>
+                        <div style="text-align: left; margin-top: 2rem;">
+                            <p style="margin-bottom: 1.2rem; color: #1e293b;"><strong>1. Tag et valg:</strong> I simulatoren bliver du stillet over for realistiske hverdagssituationer. Dine valg afgør din skæbne.</p>
+                            <p style="margin-bottom: 1.2rem; color: #1e293b;"><strong>2. Lær af fejlene:</strong> Hvis du bliver hacket, forklarer vi præcis hvad der gik galt, så du bliver klogere.</p>
+                            <p style="margin-bottom: 1.2rem; color: #1e293b;"><strong>3. Bliv ekspert:</strong> Brug 'Læring' sektionen for at dykke ned i teorien bag de emner du møder i spillet.</p>
+                        </div>
+                        <button id="start-from-guide" class="btn-main full-width" style="margin-top: 1rem;">Start Rejsen Nu</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="v3-footer">
